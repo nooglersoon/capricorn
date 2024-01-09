@@ -6,10 +6,12 @@ struct ContentView: View {
             GeometryReader(content: { geometry in
                 ScrollView{
                     HomeSection(title: "Nearby") {
-                        HomePlaceCell()
-                        HomePlaceCell()
-                        HomePlaceCell()
-                        HomePlaceCell()
+                        NavigationLink {
+                            PlaceDetail()
+                        } label: {
+                            HomePlaceCell()
+                        }
+                        .buttonStyle(.plain)
                     }
                 }
                 .frame(width: geometry.size.width, height: geometry.size.height, alignment: .leading)
