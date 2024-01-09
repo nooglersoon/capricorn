@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E649616D2B4CF127005B5FD3 /* HomePlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E649616C2B4CF127005B5FD3 /* HomePlaceCell.swift */; };
+		E64961702B4CF1B1005B5FD3 /* HomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E649616F2B4CF1B1005B5FD3 /* HomeSection.swift */; };
 		E693D8772B46908E00D0A206 /* CapricornApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E693D8762B46908E00D0A206 /* CapricornApp.swift */; };
 		E693D8792B46908E00D0A206 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E693D8782B46908E00D0A206 /* ContentView.swift */; };
 		E693D87B2B46909000D0A206 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E693D87A2B46909000D0A206 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E649616C2B4CF127005B5FD3 /* HomePlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePlaceCell.swift; sourceTree = "<group>"; };
+		E649616F2B4CF1B1005B5FD3 /* HomeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSection.swift; sourceTree = "<group>"; };
 		E693D8732B46908E00D0A206 /* Capricorn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capricorn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E693D8762B46908E00D0A206 /* CapricornApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapricornApp.swift; sourceTree = "<group>"; };
 		E693D8782B46908E00D0A206 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +75,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E649616A2B4CF0FA005B5FD3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E649616E2B4CF1A5005B5FD3 /* Section */,
+				E649616B2B4CF108005B5FD3 /* Cell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E649616B2B4CF108005B5FD3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E649616C2B4CF127005B5FD3 /* HomePlaceCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E649616E2B4CF1A5005B5FD3 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				E649616F2B4CF1B1005B5FD3 /* HomeSection.swift */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
 		E693D86A2B46908E00D0A206 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +123,7 @@
 		E693D8752B46908E00D0A206 /* Capricorn */ = {
 			isa = PBXGroup;
 			children = (
+				E649616A2B4CF0FA005B5FD3 /* Views */,
 				E693D8762B46908E00D0A206 /* CapricornApp.swift */,
 				E693D8782B46908E00D0A206 /* ContentView.swift */,
 				E693D87A2B46909000D0A206 /* Assets.xcassets */,
@@ -258,6 +288,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E693D8792B46908E00D0A206 /* ContentView.swift in Sources */,
+				E649616D2B4CF127005B5FD3 /* HomePlaceCell.swift in Sources */,
+				E64961702B4CF1B1005B5FD3 /* HomeSection.swift in Sources */,
 				E693D8772B46908E00D0A206 /* CapricornApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

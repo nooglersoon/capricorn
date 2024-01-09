@@ -2,14 +2,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(spacing: 8) {
-            Text("Project Capricorn")
-                .font(.title)
-                .bold()
-            Text("by: eaket studio")
-                .font(.caption)
+        NavigationStack{
+            GeometryReader(content: { geometry in
+                ScrollView{
+                    HomeSection(title: "Nearby") {
+                        HomePlaceCell()
+                        HomePlaceCell()
+                        HomePlaceCell()
+                        HomePlaceCell()
+                    }
+                }
+                .frame(width: geometry.size.width, height: geometry.size.height, alignment: .leading)
+            })
+            .padding(16)
+            .navigationTitle("Lens")
         }
-        .padding()
     }
 }
 
