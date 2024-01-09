@@ -1,22 +1,26 @@
 import SwiftUI
+import MapKit
 
 struct PlaceDetail: View {
+    
+    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: -6.89148, longitude: 107.6106591), span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+    
     var body: some View {
-        GeometryReader(content: { geometry in
-            ZStack{
-                // Add background image
+        ZStack{
+            // Add background image
+            GeometryReader(content: { geometry in
                 ScrollView {
                     VStack(alignment: .leading, spacing: 32) {
                         VStack(
                             alignment: .leading,
                             spacing: 8,
                             content: {
-                            Text("Institut Teknologi Bandung")
-                                .font(.headline)
-                                .bold()
-                            Text("Bandung, Jawa Barat")
-                                .font(.subheadline)
-                        })
+                                Text("Institut Teknologi Bandung")
+                                    .font(.headline)
+                                    .bold()
+                                Text("Bandung, Jawa Barat")
+                                    .font(.subheadline)
+                            })
                         PlaceDetailSectionView(section: .weather) {
                             ZStack(alignment: .leading, content: {
                                 RoundedRectangle(cornerRadius: 16)
@@ -30,16 +34,22 @@ struct PlaceDetail: View {
                             })
                         }
                         PlaceDetailSectionView(section: .map) {
-                            ZStack(alignment: .leading, content: {
-                                RoundedRectangle(cornerRadius: 16)
-                                    .fill(.black)
-                                    .opacity(0.75)
-                                VStack{
-                                    Text("14C Clear")
-                                }
-                                .foregroundStyle(.white)
+                            ZStack(alignment: .topTrailing){
+                                Map(coordinateRegion: $region)
+                                    .frame(width: geometry.size.width - 32, height: 120)
+                                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .frame(width: 32, height: 32, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                        .overlay {
+                                            Image(systemName: "location.fill")
+                                                .foregroundStyle(.white)
+                                                .font(.caption)
+                                        }
+                                })
+                                .buttonStyle(.plain)
                                 .padding()
-                            })
+                            }
                         }
                         PlaceDetailSectionView(section: .poi) {
                             ZStack(alignment: .leading, content: {
@@ -62,10 +72,10 @@ struct PlaceDetail: View {
                 }
                 .padding(16)
                 .frame(width: geometry.size.width, height: geometry.size.height, alignment: .leading)
-            }
-            .navigationTitle("ITB")
-            .navigationBarTitleDisplayMode(.inline)
-        })
+            })
+        }
+        .navigationTitle("ITB")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

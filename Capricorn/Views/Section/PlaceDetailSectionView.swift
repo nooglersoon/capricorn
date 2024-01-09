@@ -26,7 +26,7 @@ struct PlaceDetailSectionView<Content: View>: View {
     @ViewBuilder let content: Content
     var body: some View {
         VStack(alignment: .leading, spacing: 16){
-            HStack{
+            HStack(alignment: .center){
                 Text(section.title)
                     .font(.title2)
                     .bold()
