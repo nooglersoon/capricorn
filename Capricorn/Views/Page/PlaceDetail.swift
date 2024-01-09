@@ -45,9 +45,10 @@ struct PlaceDetail: View {
                                         .frame(width: 32, height: 32, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                         .overlay {
                                             Image(systemName: "location.fill")
-                                                .foregroundStyle(.white)
+                                                .foregroundStyle(.background)
                                                 .font(.caption)
                                         }
+                                        .background(.background)
                                 })
                                 .buttonStyle(.plain)
                                 .padding()

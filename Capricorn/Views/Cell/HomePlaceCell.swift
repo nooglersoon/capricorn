@@ -14,7 +14,7 @@ struct HomePlaceCell: View {
                         .font(.caption)
                 }
                 .lineLimit(1)
-                .foregroundStyle(.white)
+                .foregroundStyle(.background)
                 Spacer()
                 Image(systemName: "chevron.right")
                     .foregroundStyle(.white)
