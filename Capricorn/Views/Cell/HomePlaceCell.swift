@@ -17,7 +17,7 @@ struct HomePlaceCell: View {
                 .foregroundStyle(.background)
                 Spacer()
                 Image(systemName: "chevron.right")
-                    .foregroundStyle(.white)
+                    .foregroundStyle(.background)
                     .padding(.horizontal, 4)
             }
             .padding(.horizontal, 24)

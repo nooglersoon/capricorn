@@ -22,7 +22,7 @@ struct PlaceDetailPoICell: View {
                 gradient: Gradient(
                     colors: [Color.black.opacity(1.0), Color.black.opacity(0.0)]),
                 startPoint: .bottom,
-                endPoint: .top
+                endPoint: .center
             )
             .frame(width: 160, height: 100)
             .clipped()
