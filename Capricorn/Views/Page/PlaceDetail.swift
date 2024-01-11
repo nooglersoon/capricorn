@@ -32,16 +32,59 @@ struct PlaceDetail: View {
                     }
                     VStack(spacing: 32) {
                         PlaceDetailSectionView(section: .weather) {
-                            ZStack(alignment: .leading, content: {
+                            HStack{
                                 RoundedRectangle(cornerRadius: 16)
-                                    .fill(.black)
-                                    .opacity(0.75)
-                                VStack{
-                                    Text("14C Clear")
+                                    .foregroundStyle(.yellow)
+                                    .frame(width: 128, height: 128, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                    .overlay {
+                                        VStack(spacing: 8){
+                                            Image(systemName: "sun.max")
+                                                .font(.largeTitle)
+                                                .foregroundStyle(.background)
+                                            VStack(spacing: 2){
+                                                Text("Sunny")
+                                                    .font(.headline)
+                                                Text("28 °C")
+                                                    .font(.callout)
+                                            }
+                                            .foregroundStyle(.background)
+                                        }
+                                    }
+                                VStack(spacing: 16){
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .overlay {
+                                            Text("It's great time to \ntake photo")
+                                                .foregroundStyle(.background)
+                                                .font(.subheadline)
+                                                .bold()
+                                                .lineLimit(2)
+                                                .multilineTextAlignment(.center)
+                                        }
+                                    HStack(spacing: 32){
+                                        VStack(spacing: 4){
+                                            Image(systemName: "cloud.rain")
+                                                .font(.title3)
+                                            Text("Today")
+                                                .font(.caption)
+                                        }
+                                        .foregroundStyle(.foreground)
+                                        VStack(spacing: 4){
+                                            Image(systemName: "cloud.rain")
+                                                .font(.title3)
+                                            Text("02 Jan")
+                                                .font(.caption)
+                                        }
+                                        .foregroundStyle(.secondary)
+                                        VStack(spacing: 4){
+                                            Image(systemName: "cloud.rain")
+                                                .font(.title3)
+                                            Text("03 Jan")
+                                                .font(.caption)
+                                        }
+                                        .foregroundStyle(.secondary)
+                                    }
                                 }
-                                .foregroundStyle(.white)
-                                .padding()
-                            })
+                            }
                         }
                         PlaceDetailSectionView(section: .map) {
                             ZStack(alignment: .topTrailing){
