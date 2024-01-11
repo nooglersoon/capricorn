@@ -8,11 +8,15 @@ struct PlaceDetail: View {
     let data = (1...6).map { $0 }
     
     var body: some View {
-        ZStack{
-            // Add background image
-            GeometryReader(content: { geometry in
-                ScrollView {
-                    VStack(alignment: .leading, spacing: 32) {
+        GeometryReader(content: { geometry in
+            ScrollView {
+                VStack(alignment: .leading, spacing: 8) {
+                    ZStack(alignment: .bottomLeading){
+                        Image("photo")
+                            .resizable()
+                            .frame(height: 240)
+                            .mask(LinearGradient(gradient: Gradient(colors: [
+                                .white, .white, .clear]), startPoint: .top, endPoint: .bottom))
                         VStack(
                             alignment: .leading,
                             spacing: 8,
@@ -23,6 +27,10 @@ struct PlaceDetail: View {
                                 Text("Bandung, Jawa Barat")
                                     .font(.subheadline)
                             })
+                        .foregroundStyle(.foreground)
+                        .padding(16)
+                    }
+                    VStack(spacing: 32) {
                         PlaceDetailSectionView(section: .weather) {
                             ZStack(alignment: .leading, content: {
                                 RoundedRectangle(cornerRadius: 16)
@@ -67,14 +75,18 @@ struct PlaceDetail: View {
                                 .multilineTextAlignment(.leading)
                         }
                     }
+                    .padding(16)
                 }
-                .scrollIndicators(.hidden)
-                .padding(16)
-                .frame(width: geometry.size.width, height: geometry.size.height, alignment: .leading)
-            })
-        }
+            }
+            .scrollIndicators(.hidden)
+            .frame(width: geometry.size.width, height: geometry.size.height, alignment: .leading)
+        })
+        .ignoresSafeArea(.all, edges: .top)
         .navigationTitle("ITB")
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear(perform: {
+            UIScrollView.appearance().bounces = false
+        })
     }
 }
 
