@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E60C2F5D2B50EBDB00831F62 /* PoIDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E60C2F5C2B50EBDB00831F62 /* PoIDetail.swift */; };
 		E649616D2B4CF127005B5FD3 /* HomePlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E649616C2B4CF127005B5FD3 /* HomePlaceCell.swift */; };
 		E64961702B4CF1B1005B5FD3 /* HomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E649616F2B4CF1B1005B5FD3 /* HomeSection.swift */; };
 		E64961732B4CF3F6005B5FD3 /* PlaceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64961722B4CF3F6005B5FD3 /* PlaceDetail.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E60C2F5C2B50EBDB00831F62 /* PoIDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoIDetail.swift; sourceTree = "<group>"; };
 		E649616C2B4CF127005B5FD3 /* HomePlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePlaceCell.swift; sourceTree = "<group>"; };
 		E649616F2B4CF1B1005B5FD3 /* HomeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSection.swift; sourceTree = "<group>"; };
 		E64961722B4CF3F6005B5FD3 /* PlaceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetail.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				E64961722B4CF3F6005B5FD3 /* PlaceDetail.swift */,
+				E60C2F5C2B50EBDB00831F62 /* PoIDetail.swift */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				E64961702B4CF1B1005B5FD3 /* HomeSection.swift in Sources */,
 				E693D8772B46908E00D0A206 /* CapricornApp.swift in Sources */,
 				E64961752B4CF9B2005B5FD3 /* PlaceDetailSectionView.swift in Sources */,
+				E60C2F5D2B50EBDB00831F62 /* PoIDetail.swift in Sources */,
 				E64961732B4CF3F6005B5FD3 /* PlaceDetail.swift in Sources */,
 				E64961772B4D0671005B5FD3 /* PlaceDetailPoICell.swift in Sources */,
 			);
