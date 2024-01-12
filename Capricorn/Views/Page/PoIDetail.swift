@@ -11,20 +11,34 @@ struct PoIDetail: View {
                             .frame(height: 240)
                             .mask(LinearGradient(gradient: Gradient(colors: [
                                 .white, .white, .clear]), startPoint: .top, endPoint: .bottom))
-                        VStack(
-                            alignment: .leading,
+                        HStack(
+                            alignment: .center,
                             spacing: 8,
                             content: {
                                 Text("Plaza Widya")
-                                    .font(.title2)
+                                    .font(.title)
                                     .bold()
+                                Spacer()
+                                Button {
+                                    print("")
+                                } label: {
+                                    RoundedRectangle(cornerRadius: 8)
+                                        .overlay {
+                                            Image(systemName: "camera")
+                                                .font(.title2)
+                                                .foregroundStyle(.background)
+                                        }
+                                        .frame(width: 50)
+                                }
+                                .frame(maxHeight: 50)
+
                             })
                         .foregroundStyle(.foreground)
                         .padding(16)
                         .padding(.bottom, 16)
                     }
                     VStack(spacing: 32) {
-                        PlaceDetailSectionView(section: .weather) {
+                        PlaceDetailSectionView(section: .direction) {
                             HStack{
                                 RoundedRectangle(cornerRadius: 16)
                                     .foregroundStyle(.yellow)
@@ -79,7 +93,7 @@ struct PoIDetail: View {
                                 }
                             }
                         }
-                        PlaceDetailSectionView(section: .about) {
+                        PlaceDetailSectionView(section: .inspiration) {
                             Text("Institut Teknologi Bandung is the first technical university in Indonesia that was established on March 2, 1959 in West Java, with a mission to serve science and technology to develop the nation. Born in an atmosphere full of dynamics based on the spirit of the struggle for the Proclamation of Independence, ITB is here to optimize the development of an advanced and dignified nation.")
                                 .font(.caption)
                                 .multilineTextAlignment(.leading)

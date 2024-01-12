@@ -5,6 +5,8 @@ enum PlaceSection {
     case poi
     case weather
     case about
+    case direction
+    case inspiration
     
     var title: String {
         switch self {
@@ -16,6 +18,10 @@ enum PlaceSection {
             "Weather status"
         case .about:
             "About"
+        case .direction:
+            "Direction"
+        case .inspiration:
+            "Inspiration"
         }
     }
     
